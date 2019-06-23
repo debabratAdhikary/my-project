@@ -33,7 +33,8 @@ try {
 	e1.printStackTrace();
 }
 String b=request.getParameter("p_id");
-String n=request.getParameter("p_name");  
+String n=request.getParameter("p_name");
+String o=request.getParameter("cat");
 String c=request.getParameter("price");  
 String e=request.getParameter("description");  
 String p=request.getParameter("quantity");  
@@ -43,14 +44,14 @@ try{
 Class.forName("com.mysql.jdbc.Driver");  
 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommerce","root","as01bp2556");  
   
-PreparedStatement ps=con.prepareStatement("update products set p_name='"+n+"',price='"+c+"',description='"+e+"',quantity='"+p+"' where p_id='"+b+"'");  
+PreparedStatement ps=con.prepareStatement("update products set p_name='"+n+"',catagory='"+o+"',price='"+c+"',description='"+e+"',quantity='"+p+"' where p_id='"+b+"'");  
    
 int i=ps.executeUpdate();  
 if(i>0)  
 out.print("Successfully Updated");  
 
 
-RequestDispatcher rd=request.getRequestDispatcher("ProductEdit.jsp?id="+b);
+RequestDispatcher rd=request.getRequestDispatcher("ProductEdit.jsp?Proid="+b); /*the id should same as in ViewProduct.jsp*/
 rd.include(request, response);
           
 }catch (Exception e2) {System.out.println(e2);}  

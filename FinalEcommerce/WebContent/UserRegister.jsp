@@ -83,8 +83,8 @@ a {
 <div class="col-lg-6">
 <form action="UserRegister" method="post">
   <div class="container" align="center" >
-  
-    <h1>Create Account</h1>
+  	<h1 ><u>Welcome to Panchratna Stationery</u></h1>
+    <h2>Create Account</h2>
     
     
   <input type="text" placeholder="Enter your Name" name="name" style="height:10px;" required></br>
@@ -100,15 +100,15 @@ a {
     
     <input type="password" placeholder="Repeat Password" name="psw-repeat" style="height:10px;" required></br>
     
-    <input type="text" placeholder="Enter Address" name="address" style="height:10px;" required>
+    <input type="text" placeholder="Enter Address" name="address" style="height:10px;" required><br>
     
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    <!-- <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
 
     <button type="submit" class="registerbtn">Register</button>
   </div>
   
   <div class="container signin">
-    <p>Already have an account? <a href="UserLogin.html">Login</a></p>
+    <p>Already have an account? <a href="UserLogin.jsp">Login</a></p>
   </div>
 </form>
 </div>

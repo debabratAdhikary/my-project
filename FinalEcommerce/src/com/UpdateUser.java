@@ -42,6 +42,7 @@ String c=request.getParameter("contact");
 String e=request.getParameter("email");  
 String p=request.getParameter("psw");
 String a=request.getParameter("adrs");
+String s=request.getParameter("stat");
   
 System.out.println("HERE In UPDT"+id+"na"+n);
 
@@ -49,21 +50,21 @@ try{
 Class.forName("com.mysql.jdbc.Driver");  
 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommerce","root","as01bp2556");  
   
-PreparedStatement ps=con.prepareStatement("update register set name='"+n+"', contact='"+c+"', email='"+e+"', password='"+p+"', address='"+a+"' where r_id='"+id+"' ");  
+PreparedStatement ps=con.prepareStatement("update register set name='"+n+"', contact='"+c+"', email='"+e+"', password='"+p+"', address='"+a+"' , valid='"+s+"' where r_id='"+id+"' ");  
    
 int i=ps.executeUpdate();  
 if(i>0)  {
-out.print("Successfully Updated");  
-
-
-RequestDispatcher rd=request.getRequestDispatcher("UserUpdate.jsp");
+	out.println("<script type=\"text/javascript\">");
+	out.println("alert('Successfully updated');");
+	out.println("</script>");
+RequestDispatcher rd=request.getRequestDispatcher("ViewUser.jsp");
 rd.include(request, response);
 }
 else {
-	out.print("Successfully Updated");  
+	out.print("Operation Unsuccessfull");  
 
 
-	RequestDispatcher rd=request.getRequestDispatcher("UserUpdate.jsp");
+	RequestDispatcher rd=request.getRequestDispatcher("ViewUser.jsp");
 	rd.include(request, response);
 }
 }

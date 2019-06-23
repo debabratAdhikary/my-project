@@ -77,8 +77,8 @@ a {
 
 <form action="UserLogin" method="post">
   <div class="container" align="center">
-	
-    <h1>Login</h1>
+	<h1><u>Welcome to Panchratna Stationery</u></h1>
+    <h2>User Login</h2>
     
     <hr>
 
@@ -89,16 +89,16 @@ a {
 
     
     <input type="password" placeholder="Enter Password" name="psw" required><br>
-	<p style="padding-left:26%;"><a href="#">Forgot password?</a></p>
+	<!-- <p style="padding-left:26%;"><a href="#">Forgot password?</a></p> -->
     <hr>
 	
-    <p>By Logging in agree to our <a href="#">Terms & Privacy</a></p>
+    <!-- <p>By Logging in agree to our <a href="#">Terms & Privacy</a></p> -->
 
     <button type="submit" class="registerbtn">Login</button>
   </div>
   
   <div class="container signin">
-    <p>New to WEBCORP? <a href="UserRegister.jsp">Register</a>.</p>
+    <p>New to Panchratna Stationery? <a href="UserRegister.jsp">Register</a>.</p>
   </div>
 </form>
 

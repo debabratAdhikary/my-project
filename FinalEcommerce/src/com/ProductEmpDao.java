@@ -24,10 +24,11 @@ public class ProductEmpDao {
         try{  
             Connection con=EmpDao.getConnection();  
             PreparedStatement ps=con.prepareStatement(  
-                         "insert into products(p_name,price,p_image,description,quantity) values (?,?,?,?,?)"); /*include image*/   
+                         "insert into products(p_name,category,price,description,quantity) values (?,?,?,?,?)"); /*include image*/   
             ps.setString(1,e.getP_Name());  
-            ps.setString(2,e.getPrice());  
-            ps.setString(3,e.getP_image());  
+           
+            ps.setString(2,e.getP_cat());  
+            ps.setString(3,e.getPrice());
             ps.setString(4,e.getDescription());  
             ps.setString(5,e.getQuantity());  
               
@@ -43,11 +44,12 @@ public class ProductEmpDao {
         try{  
             Connection con=ProductEmpDao.getConnection();  	/*maintain the empdao page name*/
             PreparedStatement ps=con.prepareStatement(  
-                         "update products set p_name=?,price=?,description=?,quantity=? where p_id=?");  
+                         "update products set p_name=?,category=?,price=?,description=?,quantity=? where p_id=?");  
             ps.setString(1,e.getP_Name());  
-            ps.setString(2,e.getPrice());
+            ps.setString(2,e.getP_cat());
+            ps.setString(3,e.getPrice());
             
-            /*ps.setString(3,e.getP_image());*/
+            
             
             ps.setString(3,e.getDescription());  
             ps.setString(4,e.getQuantity());  
@@ -84,7 +86,9 @@ public class ProductEmpDao {
             if(rs.next()){  
                 e.setP_id(rs.getInt(1));  
                 ps.setString(1,e.getP_Name());  
-                ps.setString(2,e.getPrice());
+                ps.setString(2,e.getP_cat());
+                ps.setString(3,e.getPrice());
+                
                 
                 /*image retrieval*/
      		   /*Blob b=rs.getBlob(4);
@@ -94,8 +98,8 @@ public class ProductEmpDao {
      		   fout.close();/*
      		   
               /*ends*/
-                ps.setString(3,e.getDescription());  
-                ps.setString(4,e.getQuantity());   
+                ps.setString(4,e.getDescription());  
+                ps.setString(5,e.getQuantity());   
                
             }  
             con.close();  
@@ -115,8 +119,10 @@ public class ProductEmpDao {
             	ProductEmp e=new ProductEmp();  
                 e.setP_id(rs.getInt(1));  
                 e.setP_Name(rs.getString(2));  
-                e.setPrice(rs.getString(3));  
-                e.setDescription(rs.getString(4));  
+                e.setP_cat(rs.getString(3));
+                e.setPrice(rs.getString(4));
+                
+                e.setDescription(rs.getString(5));  
                 e.setQuantity(rs.getString("quantity"));  
                 list.add(e);  
             }  

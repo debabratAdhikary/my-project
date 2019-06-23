@@ -1,14 +1,10 @@
-<%@page import="java.sql.DriverManager"%>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.Statement"%>
-<%@page import="java.sql.Connection"%>
-<%@ page import="java.util.List" %>
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
 <head>
-	<!-- <title>Electro Store Ecommerce Category Bootstrap Responsive Web Template | Single Product 1 :: w3layouts</title> -->
+	<title>Electro Store Ecommerce Category Bootstrap Responsive Web Template | About Us :: w3layouts</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -43,6 +39,80 @@
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
 	    rel="stylesheet">
 	<!-- //web fonts -->
+
+
+		<style>
+		/*style for login form*/
+		body {
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 47%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 35%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+.navbar-brand>img {
+	background-color: black;
+  padding-top: 11px;
+  width: 150px;
+}
+
+/*style for login form*/
+	</style>
 
 </head>
 
@@ -242,13 +312,14 @@
 						<!-- cart details -->
 						<div class="col-2 top_nav_right text-center mt-sm-0 mt-2">
 							<div class="wthreecartaits wthreecartaits2 cart cart box_1">
-								<form action="#" method="post" class="last">
-									<input type="hidden" name="cmd" value="_cart">
-									<input type="hidden" name="display" value="1">
-									<button class="btn w3view-cart" type="submit" name="submit" value="">
-										<i class="fas fa-cart-arrow-down"></i>
-									</button>
-								</form>
+							
+							
+							
+						
+						
+										<a href="payment.jsp"><i class="fas fa-cart-arrow-down" style="height: 40px;width: 45px;"></i></a>
+								
+							
 							</div>
 						</div>
 						<!-- //cart details -->
@@ -309,32 +380,32 @@
 										<div class="col-sm-6 multi-gd-img">
 											<ul class="multi-column-dropdown">
 												<li>
-													<a href="product.html?"> Pen</a>
+													<a href="pen.jsp?"> Pen</a>
 												</li>
 												<li>
-													<a href="product.html">Marker</a>
+													<a href="marker.jsp">Marker</a>
 												</li>
 												<li>
-													<a href="product.html">Pencil</a>
+													<a href="pencil.jsp">Pencil</a>
 												</li>
 												<li>
-													<a href="product.html">Calculator</a>
+													<a href="calculator.jsp">Calculator</a>
 												</li>
 												<li>
-													<a href="product.html">Diary</a>
+													<a href="product.jsp">Diary</a>
 												</li>
 												<li>
-													<a href="product.html">Notepad</a>
+													<a href="product.jsp">Notepad</a>
 												</li>
 												<li>
-													<a href="product.html">Paper</a>
+													<a href="product.jsp">Paper</a>
 												</li>
 											</ul>
 										</div>
 										<div class="col-sm-6 multi-gd-img">
 											<ul class="multi-column-dropdown">
 												<li>
-													<a href="product.html?procat=<%=Brush%>">Brush</a>
+													<a href="brush.jsp?procat=<%=Brush%>">Brush</a>
 												</li>
 												<li>
 													<a href="product.html">Eraser</a>
@@ -358,7 +429,7 @@
 							
 						</li>
 						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="about.html">About Us</a>
+							<a class="nav-link" href="about.jsp">About Us</a>
 						</li>
 						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
 							<!-- <a class="nav-link" href="product.html">New Arrivals</a> -->
@@ -379,7 +450,7 @@
 							</div> -->
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Contact Us</a>
+							<a class="nav-link" href="contact.jsp">Contact Us</a>
 						</li>
 					</ul>
 				</div>
@@ -399,247 +470,128 @@
 			<div class="container">
 				<ul class="w3_short">
 					<li>
-						<a href="index.html">Home</a>
+						<a href="#">Panchratna Stationery Shop</a>
 						<i>|</i>
 					</li>
-					<li>Product Details</li>
+					<li>About Us</li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	<!-- //page -->
 
-<div class="banner-bootom-w3-agileits py-5">
+	<!-- about -->
+	<div class="welcome py-sm-5 py-4">
 		<div class="container py-xl-4 py-lg-2">
 			<!-- tittle heading -->
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-				<span>P</span>roduct
-				<span>D</span>etails</h3>
+				<span>A</span>bout
+				<span>U</span>s</h3>
 			<!-- //tittle heading -->
-
-<%
-
-/*copy  */
-Statement statement=null;
-Connection connection=null;
-ResultSet  resultSet=null;
-	try {
-		if(connection==null|| connection.isClosed()) {
-			/*connection  */
-			Class.forName("com.mysql.jdbc.Driver");  
-			connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommerce","root","as01bp2556");
-			
-		}		}
-	catch (Exception e) {
-	
-		e.printStackTrace();
-	}
-
-try{ 
-
-	int count=0;
-
-	/*fetch the id from index page  */
-	Object i=request.getParameter("Proid");
-	String idd=(String)i;  /*conversion to string  */
-	
-	
-	/* String cat="Brush"; */
-statement=connection.createStatement();
-
-String sql ="SELECT * FROM products WHERE p_id='"+idd+"'";
-
-
-resultSet = statement.executeQuery(sql);
-while(resultSet.next()){
-count++;
-	
-
-%> 	
-
-
-
-
-
-	<!-- Single Page -->
-	
 			<div class="row">
-				<div class="col-lg-5 col-md-8 single-right-left ">
-					<div class="grid images_3_of_2">
-						<div class="flexslider">
-							<ul class="slides">
-		<!-- 						<li data-thumb="images/si1.jpg">
-									<div class="thumb-image">
-										<img src="images/si1.jpg" data-imagezoom="true" class="img-fluid" alt=""> </div>
-								</li>   -->
-								<li data-thumb="images/si2.jpg">
-									<div class="thumb-image">
-										<img src="images/products/<%=resultSet.getString("p_id") %>.jpg" data-imagezoom="true" class="img-fluid" alt=""> </div>
-								</li>
-								<!--  
-																<li data-thumb="images/si3.jpg">
-									<div class="thumb-image">
-										<img src="images/si3.jpg" data-imagezoom="true" class="img-fluid" alt=""> </div>
-								</li>-->
-							</ul>
-							<div class="clearfix"></div>
-						</div>
-					</div> 
-				</div>
+				<div class="col-lg-6 welcome-left">
+					<h3>Welcome</h3>
+					<h4 class="my-sm-3 my-2">Panchratna stationery is a stationery shop based in Pune and deals in stationery products.
+</h4>
+					<p>Address: 	Kalyani Nagar road, Sainikwadi, Vadgaon Sheri, Pune, Maharastra 411014</p>
 
-				<div class="col-lg-7 single-right-left simpleCart_shelfItem">
-					<h3 class="mb-3"><%=resultSet.getString("p_name") %> </h3>
-					<p class="mb-3">
-						<span class="item_price"><%=resultSet.getString("price") %></span>
-						<del class="mx-2 font-weight-light">$280.00</del>
-						<label>Free delivery</label>
-					</p>
-					<div class="single-infoagile">
-						<ul>
-							<li class="mb-3">
-								Cash on Delivery Eligible.
-							</li>
-							<!-- <li class="mb-3">
-								Shipping Speed to Delivery.
-							</li>
-							<li class="mb-3">
-								EMIs from $655/month.
-							</li>
-							<li class="mb-3">
-								Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C
-							</li> -->
-						</ul>
-					</div>
-					<div class="product-single-w3l">
-						<p class="my-3">
-							<i class="far fa-hand-point-right mr-2"></i>
-							<label>1 Year</label>Manufacturer Warranty</p>
-						<ul>
-							<li class="mb-1">
-								<%=resultSet.getString("catagory") %>
-							</li>
-							<li class="mb-1">
-								<%=resultSet.getString("description") %>
-							</li>
-							<li class="mb-1">
-								<%=resultSet.getString("quantity") %>
-							</li>
-							<!-- <li class="mb-1">
-								3300 mAh Battery
-							</li>
-							<li class="mb-1">
-								Exynos 7870 Octa Core 1.6GHz Processor
-							</li> -->
-						</ul>
-						<!-- <p class="my-sm-4 my-3">
-							<i class="fas fa-retweet mr-3"></i>Net banking & Credit/ Debit/ ATM card
-						</p> -->
-					</div>
-					<div class="occasion-cart">
-						<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-							<form action="CartAdd" method="post">
-								<fieldset>
-									<input type="hidden" name="cmd" value="_cart" />
-											<input type="hidden" name="ProductID" value="<%="p_id" %>" class="button" />
-									
-												<input type="hidden" name="UserID" value="<%="r_id" %>" class="button" />
-									
-											<input type="submit" name="submit" value="Add to cart" class="button" />
-								</fieldset>
-							</form>
-						</div>
-					</div>
+	<p>Contact:	08806062862 
+</p>
+				</div>
+				<div class="col-lg-6 welcome-right-top mt-lg-0 mt-sm-5 mt-4">
+					<img src="download/notepad.jpg" class="img-fluid" alt=" ">
 				</div>
 			</div>
-		
-	
-						<% 
-if(count>2){
-	break;
-}
-}
+		</div>
+	</div>
+	<!-- //about -->
 
-} catch (Exception e) {
-e.printStackTrace();
-}
-finally {
-    try {
-    	resultSet.close();
-		statement.close();
-	} catch (Exception e) {
-		e.printStackTrace();}
-    try {
-    	if(connection!=null) {
-		connection.close();
-		}
-	} catch (Exception e) {
-		e.printStackTrace();
-	}
-} 
-
-
-%>
-<!-- copy end -->
-		<!--last two div  -->				
-			</div>
-						</div>				
-						
-	
-	
-	
-	
-	
-	
-	<!-- //Single Page -->
-
-	<!-- middle section -->
-	
-	<!-- <div class="join-w3l1 py-sm-5 py-4">
+	<!-- testimonials -->
+<!-- 	<div class="testimonials py-sm-5 py-4">
 		<div class="container py-xl-4 py-lg-2">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="join-agile text-left p-4">
-						<div class="row">
-							<div class="col-sm-7 offer-name">
-								<h6>Smooth, Rich & Loud Audio</h6>
-								<h4 class="mt-2 mb-3">Branded Headphones</h4>
-								<p>Sale up to 25% off all in store</p>
-							</div>
-							<div class="col-sm-5 offerimg-w3l">
-								<img src="images/off1.png" alt="" class="img-fluid">
-							</div>
+			tittle heading
+			<h3 class="tittle-w3l text-center text-white mb-lg-5 mb-sm-4 mb-3">
+				<span>O</span>ur
+				<span>C</span>ustomers
+				<span>S</span>ays</h3>
+			 tittle heading 
+			<div class="row gallery-index">
+				<div class="col-sm-6 med-testi-grid">
+					<div class="med-testi test-tooltip rounded p-4">
+						<p>"sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+							ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+					<div class="row med-testi-left my-5">
+						<div class="col-lg-2 col-3 w3ls-med-testi-img">
+							<img src="images/user.jpg" alt=" " class="img-fluid rounded-circle" />
+						</div>
+						<div class="col-lg-10 col-9 med-testi-txt">
+							<h4 class="font-weight-bold mb-lg-1 mb-2">Tyson</h4>
+							<p>fames ac turpis</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-6 mt-lg-0 mt-5">
-					<div class="join-agile text-left p-4">
-						<div class="row ">
-							<div class="col-sm-7 offer-name">
-								<h6>A Bigger Phone</h6>
-								<h4 class="mt-2 mb-3">Smart Phones 5</h4>
-								<p>Free shipping order over $100</p>
-							</div>
-							<div class="col-sm-5 offerimg-w3l">
-								<img src="images/off2.png" alt="" class="img-fluid">
-							</div>
+				<div class="col-sm-6 med-testi-grid">
+					<div class="med-testi test-tooltip rounded p-4">
+						<p>"sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+							ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+					<div class="row med-testi-left my-5">
+						<div class="col-lg-2 col-3 w3ls-med-testi-img">
+							<img src="images/user.jpg" alt=" " class="img-fluid rounded-circle" />
+						</div>
+						<div class="col-lg-10 col-9 med-testi-txt">
+							<h4 class="font-weight-bold mb-lg-1 mb-2">Alejandra</h4>
+							<p>fames ac turpis</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 med-testi-grid">
+					<div class="med-testi test-tooltip rounded p-4">
+						<p>"sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+							ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+					<div class="row med-testi-left mt-sm-5 my-5">
+						<div class="col-lg-2 col-3 w3ls-med-testi-img">
+							<img src="images/user.jpg" alt=" " class="img-fluid rounded-circle" />
+						</div>
+						<div class="col-lg-10 col-9 med-testi-txt">
+							<h4 class="font-weight-bold mb-lg-1 mb-2">Charles</h4>
+							<p>fames ac turpis</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 med-testi-grid">
+					<div class="med-testi test-tooltip rounded p-4">
+						<p>"sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+							ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+					<div class="row med-testi-left mt-5">
+						<div class="col-lg-2 col-3 w3ls-med-testi-img">
+							<img src="images/user.jpg" alt=" " class="img-fluid rounded-circle" />
+						</div>
+						<div class="col-lg-10 col-9 med-testi-txt">
+							<h4 class="font-weight-bold mb-lg-1 mb-2">Jessie</h4>
+							<p>fames ac turpis</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
- -->	<!-- middle section -->
+	</div>   -->
+	<!-- //testimonials -->
 
+	<!-- footer -->
 	<!-- footer -->
 	<footer>
 		<div class="footer-top-first">
 			<div class="container py-md-5 py-sm-4 py-3">
 				<!-- footer first section -->
-				<h2 class="footer-top-head-w3l font-weight-bold mb-2">Electronics :</h2>
+				<h2 class="footer-top-head-w3l font-weight-bold mb-2">Panchratna Stationery Shop :</h2>
 				<p class="footer-main mb-4">
-					If you're considering a new laptop, looking for a powerful new car stereo or shopping for a new HDTV, we make it easy to
-					find exactly what you need at a price you can afford. We offer Every Day Low Prices on TVs, laptops, cell phones, tablets
-					and iPads, video games, desktop computers, cameras and camcorders, audio, video and more.</p>
+					If you're considering a set of new paint brush, looking for a set of new pencil which can do amazing work or shopping for a new calculator, we make it easy to
+					find exactly what you need at a price you can afford. We offer Every Day Low Prices on pens, a wide range of markers, notepads, calculators
+					and paint brushes, diaries, erasers and more.</p>
 				<!-- //footer first section -->
 				<!-- footer second section -->
 				<div class="row w3l-grids-footer border-top border-bottom py-sm-4 py-3">
@@ -650,7 +602,7 @@ finally {
 							</div>
 							<div class="col-8 text-form-footer">
 								<h3>Free Shipping</h3>
-								<p>on orders over $100</p>
+								<p>on orders above Rs.700</p>
 							</div>
 						</div>
 					</div>
@@ -661,7 +613,7 @@ finally {
 							</div>
 							<div class="col-8 text-form-footer">
 								<h3>Fast Delivery</h3>
-								<p>World Wide</p>
+								<p>Within Pune</p>
 							</div>
 						</div>
 					</div>
@@ -685,7 +637,7 @@ finally {
 			<div class="container py-md-5 py-sm-4 py-3">
 				<div class="row footer-info w3-agileits-info">
 					<!-- footer categories -->
-					<div class="col-md-3 col-sm-6 footer-grids">
+					<!-- <div class="col-md-3 col-sm-6 footer-grids">
 						<h3 class="text-white font-weight-bold mb-3">Categories</h3>
 						<ul>
 							<li class="mb-3">
@@ -707,24 +659,24 @@ finally {
 								<a href="product2.html">Refrigerators</a>
 							</li>
 						</ul>
-					</div>
+					</div> -->
 					<!-- //footer categories -->
 					<!-- quick links -->
-					<div class="col-md-3 col-sm-6 footer-grids mt-sm-0 mt-4">
+					<div class="col-md-4 col-sm-6 footer-grids mt-sm-0 mt-4">
 						<h3 class="text-white font-weight-bold mb-3">Quick Links</h3>
 						<ul>
 							<li class="mb-3">
-								<a href="about.html">About Us</a>
+								<a href="about.jsp">About Us</a>
 							</li>
 							<li class="mb-3">
-								<a href="contact.html">Contact Us</a>
+								<a href="contact.jsp">Contact Us</a>
 							</li>
-							<li class="mb-3">
+							<!-- <li class="mb-3">
 								<a href="help.html">Help</a>
 							</li>
 							<li class="mb-3">
 								<a href="faqs.html">Faqs</a>
-							</li>
+							</li> -->
 							<li class="mb-3">
 								<a href="terms.html">Terms of use</a>
 							</li>
@@ -733,7 +685,7 @@ finally {
 							</li>
 						</ul>
 					</div>
-					<div class="col-md-3 col-sm-6 footer-grids mt-md-0 mt-4">
+					<div class="col-md-4 col-sm-6 footer-grids mt-md-0 mt-4">
 						<h3 class="text-white font-weight-bold mb-3">Get in Touch</h3>
 						<ul>
 							<li class="mb-3">
@@ -746,14 +698,14 @@ finally {
 								<i class="fas fa-envelope-open"></i>
 								<a href="mailto:example@mail.com"> mail 1@example.com</a>
 							</li>
-							<li>
+						<!-- 	<li>
 								<i class="fas fa-envelope-open"></i>
 								<a href="mailto:example@mail.com"> mail 2@example.com</a>
-							</li>
+							</li> -->
 						</ul>
 					</div>
-					<div class="col-md-3 col-sm-6 footer-grids w3l-agileits mt-md-0 mt-4">
-						<!-- newsletter -->
+					<div class="col-md-4 col-sm-6 footer-grids w3l-agileits mt-md-0 mt-4">
+						<!-- newsletter --><!-- 
 						<h3 class="text-white font-weight-bold mb-3">Newsletter</h3>
 						<p class="mb-3">Free Delivery on your first order!</p>
 						<form action="#" method="post">
@@ -761,7 +713,7 @@ finally {
 								<input type="email" class="form-control" placeholder="Email" name="email" required="">
 								<input type="submit" value="Go">
 							</div>
-						</form>
+						</form> -->
 						<!-- //newsletter -->
 						<!-- social icons -->
 						<div class="footer-grids  w3l-socialmk mt-3">
@@ -798,7 +750,7 @@ finally {
 		<div class="agile-sometext py-md-5 py-sm-4 py-3">
 			<div class="container">
 				<!-- brands -->
-				<div class="sub-some">
+				<!-- <div class="sub-some">
 					<h5 class="font-weight-bold mb-2">Mobile & Tablets :</h5>
 					<ul>
 						<li class="m-sm-1">
@@ -1001,39 +953,17 @@ finally {
 							<a href="product2.html" class="border-right pr-2">Sandwich Makers</a>
 						</li>
 					</ul>
-				</div>
-				<!-- //brands -->
+				</div>-->
+				<!-- //brands --> 
 				<!-- payment -->
 				<div class="sub-some child-momu mt-4">
 					<h5 class="font-weight-bold mb-3">Payment Method</h5>
 					<ul>
-						<li>
-							<img src="images/pay2.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay5.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay1.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay4.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay6.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay3.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay7.png" alt="">
-						</li>
+						
 						<li>
 							<img src="images/pay8.png" alt="">
 						</li>
-						<li>
-							<img src="images/pay9.png" alt="">
-						</li>
+						
 					</ul>
 				</div>
 				<!-- //payment -->
@@ -1045,8 +975,8 @@ finally {
 	<!-- copyright -->
 	<div class="copy-right py-3">
 		<div class="container">
-			<p class="text-center text-white">© 2018 Electro Store. All rights reserved | Design by
-				<a href="http://w3layouts.com"> W3layouts.</a>
+			<p class="text-center text-white">© 2018 PANCHRATNA STATIONERY SHOP. All rights reserved | Design by
+				<a href="http://w3layouts.com"> RadiantOneSolution.</a>
 			</p>
 		</div>
 	</div>
@@ -1136,25 +1066,10 @@ finally {
 		}
 	</script>
 	<!-- //password-script -->
-
-	<!-- imagezoom -->
-	<script src="js/imagezoom.js"></script>
-	<!-- //imagezoom -->
-
-	<!-- flexslider -->
-	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
-
-	<script src="js/jquery.flexslider.js"></script>
-	<script>
-		// Can also be used with $(document).ready()
-		$(window).load(function () {
-			$('.flexslider').flexslider({
-				animation: "slide",
-				controlNav: "thumbnails"
-			});
-		});
-	</script>
-	<!-- //FlexSlider-->
+	
+	<!-- scroll seller -->
+	<script src="js/scroll.js"></script>
+	<!-- //scroll seller -->
 
 	<!-- smoothscroll -->
 	<script src="js/SmoothScroll.min.js"></script>
@@ -1199,7 +1114,6 @@ finally {
 	<script src="js/bootstrap.js"></script>
 	<!-- //for bootstrap working -->
 	<!-- //js-files -->
-
 </body>
 
 </html>

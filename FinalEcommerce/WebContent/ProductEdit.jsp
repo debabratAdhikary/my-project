@@ -100,11 +100,12 @@ try{
 }catch(Exception e){System.out.println(e);}  
 try{ 
 	
-	String id=request.getParameter("id");
-	System.out.println("In Update AdId="+id);
+	String id=request.getParameter("Proid");
+	String idd=(String)id;  /*conversion to string  */
+	System.out.println("In Update AdId="+idd);
 statement=connection.createStatement();
 
-String sql ="SELECT * FROM products WHERE p_id='"+id+"'";
+String sql ="SELECT * FROM products WHERE p_id='"+idd+"'";
 
 
 resultSet = statement.executeQuery(sql);
@@ -117,7 +118,7 @@ while(resultSet.next()){
  <!-- till here --> 
 
   <form action="UpdateProduct" method="POST" >
-  <input type="hidden" name="p_id" value="<%=id %>">
+  <input type="hidden" name="p_id" value="<%=id %>" readonly>
     <div class="row">
       <div class="col-25">
         <label for="fname">Product Name</label>
@@ -128,20 +129,26 @@ while(resultSet.next()){
     </div>
     <div class="row">
       <div class="col-25">
+        <label for="lname">Product Category</label>
+      </div>
+      <div class="col-75">
+        <select id="cat" name="cat">
+    <option value="pen">PEN</option>
+    <option value="marker">MARKER</option>
+    <option value="Brush">BRUSH</option>
+    <option value="calculator">CALCULATOR</option>
+  </select>
+      </div>
+      </div>
+      <div class="row">
+      <div class="col-25">
         <label for="lname">Product Price</label>
       </div>
       <div class="col-75">
         <input type="text" id="price" name="price" value="<%=resultSet.getString("price") %>">
       </div>
     </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="country">Product Image</label>
-      </div>
- 	 <div class="col-75">
-        <input type="hidden" id="p_image" name="p_imagess" >
-      </div>
-    </div> 
+    
     
     <div class="row">
       <div class="col-25">

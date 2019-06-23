@@ -79,6 +79,10 @@ a {
   padding-top: 11px;
   width: 150px;
 }
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
 
 </style>
 </head>
@@ -102,13 +106,13 @@ try{
 
 }catch(Exception e){System.out.println(e);}  
 try{ 
-	   HttpSession sc=request.getSession();					/* if session is there */
-       Object r_id=sc.getAttribute("r_id");
-String id=(String) r_id;
-System.out.println("Here"+id);
+	
+	String id=request.getParameter("Proid");
+	String idd=(String)id;  /*conversion to string  */
+	System.out.println("In Update AdId="+idd);
 statement=connection.createStatement();
 
-String sql ="SELECT * FROM register WHERE r_id='"+id+"'";
+String sql ="SELECT * FROM register WHERE r_id='"+idd+"'";
 
 
 resultSet = statement.executeQuery(sql);
@@ -123,24 +127,30 @@ while(resultSet.next()){
 
 <form action="UpdateUser" method="post">
   <div class="container" align="center" >
-  <a class="navbar-brand" href="#" align="center"><img alt="Logo" src="https://www.solodev.com/assets/side-nav/logo.png"></a>
-    <h1>Create Account</h1>
-    <input type="hidden" name="id" value="<%=id %>"> 
+  <!-- <a class="navbar-brand" href="#" align="center"><img alt="Logo" src="https://www.solodev.com/assets/side-nav/logo.png"></a> -->
+    <h1>Edit</h1>
     
-	<input type="text"  name="name" value="<%=resultSet.getString("name") %>" required></br>
+    <input type="hidden" name="id" value="<%=id %>" readonly> 
+    
+    <label><u>User Name:</u>  </label>
+	<input type="text"  name="name" value="<%=resultSet.getString("name") %>" required readonly></br>
 	
-    <input type="text"  name="contact" value="<%=resultSet.getString("contact") %>" required></br>
+	<label><u>Contact:  </u>  </label>
+    <input type="text"  name="contact" value="<%=resultSet.getString("contact") %>" required readonly></br>
 	
-    
-    <input type="text"  name="email" value="<%=resultSet.getString("email") %>"></br>
+    <label><u>Email:    </u>  </label>
+    <input type="text"  name="email" value="<%=resultSet.getString("email") %>" readonly></br>
 
-    
-    <input type="password"  name="psw" value="<%=resultSet.getString("password") %>"required></br>
+    <label><u>Password:  </u>  </label>
+    <input type="password"  name="psw" value="<%=resultSet.getString("password") %>"required readonly></br>
 
+    <label><u>Address:   </u>  </label>
+    <input type="text"  name="adrs" value="<%=resultSet.getString("address") %>"required readonly><br>
     
-    <input type="text"  name="adrs" value="<%=resultSet.getString("address") %>"required>
+    <label><u>Status:    </u>  </label>
+    <input type="text"  name="stat" value="<%=resultSet.getString("valid") %>"required ><br>
     
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    
 
     <button type="submit" class="registerbtn">Edit and Save</button>
   </div>

@@ -89,6 +89,20 @@ input[type=submit]:hover {
         <input type="text" id="p_name" name="p_name" >
       </div>
     </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Product Category</label>
+      </div>
+ 	 <div class="col-75">
+        <select id="p_cat" name="p_cat">
+    <option value="pen">PEN</option>
+    <option value="marker">MARKER</option>
+    <option value="Brush">BRUSH</option>
+    <option value="calculator">CALCULATOR</option>
+  </select>
+      </div>
+    </div> 
     <div class="row">
       <div class="col-25">
         <label for="lname">Product Price</label>
@@ -97,14 +111,6 @@ input[type=submit]:hover {
         <input type="text" id="price" name="price" >
       </div>
     </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="country">Product Image</label>
-      </div>
- 	 <div class="col-75">
-        <input type="file" id="p_image" name="p_imagess" >
-      </div>
-    </div> 
     
     <div class="row">
       <div class="col-25">

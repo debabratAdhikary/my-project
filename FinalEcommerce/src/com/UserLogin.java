@@ -27,10 +27,11 @@ String p=request.getParameter("psw");
 
           
 try{  
+	int i=0;
 Class.forName("com.mysql.jdbc.Driver");  
 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommerce","root","as01bp2556");  
 boolean status=false;  
-PreparedStatement ps=con.prepareStatement("select * from register where contact=? AND password=?");  
+PreparedStatement ps=con.prepareStatement("select * from register where contact=? AND password=? AND valid="+i);  
   
 ps.setString(1,c);  
   
@@ -66,8 +67,9 @@ rd.include(request, response);
 }
 
 else {
+	System.out.println("in the else section");
 	out.println("<script type=\"text/javascript\">");
-	out.println("alert('Login Fail');");
+	out.println("alert('You are currently suspended from using this site');");
 	out.println("</script>");
 RequestDispatcher rd=request.getRequestDispatcher("UserLogin.jsp");
 rd.include(request, response);	

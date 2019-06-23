@@ -55,9 +55,9 @@ public class CartAdd extends HttpServlet {
 		
 			e1.printStackTrace();
 		}
-		String userid=request.getParameter("uid");
+		String userid=request.getParameter("UserID");
 	
-		 String productid=request.getParameter("pid");  
+		 String productid=request.getParameter("ProductID");  
 		 System.out.println("here"+userid+"ss"+productid);
 		 
 		 /*String p_image=request.getParameter("p_image");*/
@@ -152,7 +152,7 @@ public class CartAdd extends HttpServlet {
 					System.out.println("Insert Fail");
 					
 					out.print("<script type=\"text/javascript\">");
-					out.print("alert('Error: Not Submitted')");
+					out.print("alert('User must Login')");
 					out.print("</script>");
 
 					   

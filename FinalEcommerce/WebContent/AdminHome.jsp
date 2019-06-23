@@ -124,13 +124,14 @@ body {
          
         </div>
         <div class="column">
-          <h3><a href="ViewProduct">View Product</a></h3>
+          <h3><a href="ViewProduct.jsp">View Product</a></h3>
          
         </div>
-        <div class="column">
-          <h3><a href="">Category 3</a></h3>
+         <div class="column">
+          <h3></h3>
           
         </div>
+        
       </div>
     </div>
   </div>
@@ -144,15 +145,15 @@ body {
       </div>   
       <div class="row">
         <div class="column">
-          <h3><a href="ViewUsers">view user </a>   </h3>
+          <h3><a href="ViewUser.jsp">view user </a>   </h3>
           
         </div>
         <div class="column">
-          <h3><a href="">delete user</a></h3>
+          <h3><a href="">user order</a></h3>
          
         </div>
         <div class="column">
-          <h3><a href="">edit status</a></h3>
+          <h3></h3>
           
         </div>
       </div>
@@ -193,11 +194,11 @@ body {
    
 </div>
 
-<div style="padding:16px">
+<!-- <div style="padding:16px">
   <h3>Responsive Mega Menu (Full-width dropdown in navbar)</h3>
   <p>Hover over the "Dropdown" link to see the mega menu.</p>
   <p>Resize the browser window to see the responsive effect.</p>
 </div>
-
+ -->
 </body>
 </html>

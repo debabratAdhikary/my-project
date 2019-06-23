@@ -29,8 +29,31 @@ String p=request.getParameter("psw");
 
 /*String r=request.getParameter("psw-repeat");*/  
 
-String a=request.getParameter("address");         
+String a=request.getParameter("address");  
+int check=0;
+ResultSet resultSet=null;
 
+try{  
+Class.forName("com.mysql.jdbc.Driver");  
+
+Statement statement;
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommerce","root","as01bp2556");  
+  
+statement=con.createStatement();
+
+resultSet = statement.executeQuery("Select *  from register Where contact="+c);
+
+while(resultSet.next()){
+	check++;
+}
+
+}catch (Exception e2) {System.out.println(e2);}  
+          
+ 
+  
+
+
+if(check==0) {
 try{  
 Class.forName("com.mysql.jdbc.Driver");  
 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommerce","root","as01bp2556");  
@@ -52,7 +75,16 @@ RequestDispatcher rd=request.getRequestDispatcher("UserLogin.jsp");
 rd.include(request, response);
           
 }catch (Exception e2) {System.out.println(e2);}  
-          
+}
+else {
+		
+		out.print("Contact No alrady Exixst");  
+
+
+		RequestDispatcher rd=request.getRequestDispatcher("UserRegister.jsp");
+		rd.include(request, response);	
+
+}
 out.close();  
 }  
   

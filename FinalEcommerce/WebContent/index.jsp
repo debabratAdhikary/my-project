@@ -8,6 +8,7 @@
 <html lang="zxx">
 
 <head>
+
 	<title>Panchratna Stationery</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -138,7 +139,7 @@ a {
 							
 						</li>
 						<li class="text-center border-right text-white">
-							<i class="fas fa-phone mr-2"></i> 001 234 5678
+							<i class="fas fa-phone mr-2"></i> 08806062862
 						</li>
 						
 						
@@ -316,13 +317,14 @@ a {
 						<!-- cart details -->
 						<div class="col-2 top_nav_right text-center mt-sm-0 mt-2">
 							<div class="wthreecartaits wthreecartaits2 cart cart box_1">
-								<form action="#" method="post" class="last">
-									<input type="hidden" name="cmd" value="_cart">
-									<input type="hidden" name="display" value="1">
-									<button class="btn w3view-cart" type="submit" name="submit" value="">
-										<i class="fas fa-cart-arrow-down"></i>
-									</button>
-								</form>
+							
+							
+							
+						
+						
+										<a href="payment.jsp"><i class="fas fa-cart-arrow-down" style="height: 40px;width: 45px;"></i></a>
+								
+							
 							</div>
 						</div>
 						<!-- //cart details -->
@@ -363,7 +365,7 @@ a {
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto text-center mr-xl-5">
 						<li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="index.html">Home
+							<a class="nav-link" href="index.jsp">Home
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
@@ -383,32 +385,32 @@ a {
 										<div class="col-sm-6 multi-gd-img">
 											<ul class="multi-column-dropdown">
 												<li>
-													<a href="product.html?"> Pen</a>
+													<a href="pen.jsp?"> Pen</a>
 												</li>
 												<li>
-													<a href="product.html">Marker</a>
+													<a href="marker.jsp">Marker</a>
 												</li>
 												<li>
-													<a href="product.html">Pencil</a>
+													<a href="pencil.jsp">Pencil</a>
 												</li>
 												<li>
-													<a href="product.html">Calculator</a>
+													<a href="calculator.jsp">Calculator</a>
 												</li>
 												<li>
-													<a href="product.html">Diary</a>
+													<a href="product.jsp">Diary</a>
 												</li>
 												<li>
-													<a href="product.html">Notepad</a>
+													<a href="product.jsp">Notepad</a>
 												</li>
 												<li>
-													<a href="product.html">Paper</a>
+													<a href="product.jsp">Paper</a>
 												</li>
 											</ul>
 										</div>
 										<div class="col-sm-6 multi-gd-img">
 											<ul class="multi-column-dropdown">
 												<li>
-													<a href="product.html?procat=<%=Brush%>">Brush</a>
+													<a href="brush.jsp?procat=<%=Brush%>">Brush</a>
 												</li>
 												<li>
 													<a href="product.html">Eraser</a>
@@ -432,7 +434,7 @@ a {
 							
 						</li>
 						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="about.html">About Us</a>
+							<a class="nav-link" href="about.jsp">About Us</a>
 						</li>
 						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
 							<!-- <a class="nav-link" href="product.html">New Arrivals</a> -->
@@ -453,7 +455,7 @@ a {
 							</div> -->
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Contact Us</a>
+							<a class="nav-link" href="contact.jsp">Contact Us</a>
 						</li>
 					</ul>
 				</div>
@@ -477,12 +479,12 @@ a {
 					<div class="w3l-space-banner">
 						<div class="carousel-caption p-lg-5 p-sm-4 p-3">
 							<p>Get flat
-								<span>10%</span> Cashback</p>
+								<span>10%</span> Cashback</p>	<!--brush  -->
 							<h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">The
 								<span>Big</span>
 								Sale
 							</h3>
-							<a class="button2" href="product.html">Shop Now </a>
+							<a class="button2" href="product.jsp">Shop Now </a>
 						</div>
 					</div>
 				</div>
@@ -492,11 +494,11 @@ a {
 					<div class="w3l-space-banner">
 						<div class="carousel-caption p-lg-5 p-sm-4 p-3">
 							<p>Best
-								<span>Brushpen</span> Marker</p>
+								<span>Brushpen</span> Marker</p>  <!--marker  -->
 							<h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">Best
 								<span>Marker</span>
 							</h3>
-							<a class="button2" href="product.html">Shop Now </a>
+							<a class="button2" href="product.jsp">Shop Now </a>
 						</div>
 					</div>
 				</div>
@@ -510,7 +512,7 @@ a {
 							<h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">New
 								<span>Standard</span>
 							</h3>
-							<a class="button2" href="product.html">Shop Now </a>
+							<a class="button2" href="product.jsp">Shop Now </a><!-- pen  -->
 						</div>
 					</div>
 				</div>
@@ -524,7 +526,7 @@ a {
 							<h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">Today
 								<span>Discount</span>
 							</h3>
-							<a class="button2" href="product.html">Shop Now </a>
+							<a class="button2" href="product.jsp">Shop Now </a><!-- pencil  -->>
 						</div>
 					</div>
 				</div>
@@ -558,246 +560,227 @@ a {
 						<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
 							<h3 class="heading-tittle text-center ">New Markers</h3>
 							<div class="row">
-								<div class="col-md-4 product-men mt-5">
-									<div class="men-pro-item simpleCart_shelfItem">
-										<div class="men-thumb-item text-center" >
-											<!-- image link -->
-											<img src="download/mark12.jpg" style="height: 200px;width: 200px;" alt="">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
-												</div>
-											</div>
-										</div>
-										<div class="item-info-product text-center border-top mt-4">
-											<h4 class="pt-1">
-												<a href="single.html">Karin Metallic Marker</a>
-											</h4>
-											<div class="info-product-price my-2">
-												<span class="item_price">Rs.1000.00</span>
-												<del>Rs.1200.00</del>
-											</div>
-											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-												<form action="#" method="post">
-													<fieldset>
-														<input type="hidden" name="cmd" value="_cart" />
-														<input type="hidden" name="add" value="1" />
-														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name" value="Karin Metallic Marker" />
-														<input type="hidden" name="amount" value="1000.00" />
-														<input type="hidden" name="discount_amount" value="1.00" />
-														<input type="hidden" name="currency_code" value="IND" />
-														<input type="hidden" name="return" value=" " />
-														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Add to cart" class="button btn" />
-													</fieldset>
-												</form>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4 product-men mt-5">
-									<div class="men-pro-item simpleCart_shelfItem">
-										<div class="men-thumb-item text-center">
-											<img src="download/mark2.jpg" style="height: 200px;width: 200px;" alt="">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
-												</div>
-											</div>
-											<span class="product-new-top">New</span>
+<% 
 
-										</div>
-										<div class="item-info-product text-center border-top mt-4">
-											<h4 class="pt-1">
-												<a href="single.html">Sharpie Brush Marker/a>
-											</h4>
-											<div class="info-product-price my-2">
-												<span class="item_price">Rs.800.00</span>
-												<del>Rs.950.00</del>
-											</div>
-											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-												<form action="#" method="post">
-													<fieldset>
-														<input type="hidden" name="cmd" value="_cart" />
-														<input type="hidden" name="add" value="1" />
-														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name" value="Sharpie Brush Marker" />
-														<input type="hidden" name="amount" value="800.00" />
-														<input type="hidden" name="discount_amount" value="1.00" />
-														<input type="hidden" name="currency_code" value="IND" />
-														<input type="hidden" name="return" value=" " />
-														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Add to cart" class="button btn" />
-													</fieldset>
-												</form>
-											</div>
+/*copy  */
 
-										</div>
-									</div>
-								</div>
+Statement statement=null;
+Connection connection=null;
+ResultSet  resultSet=null;
+	try {
+		if(connection==null|| connection.isClosed()) {
+			/*connection  */
+			Class.forName("com.mysql.jdbc.Driver");  
+			connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommerce","root","as01bp2556");
+			
+		}		}
+	catch (Exception e) {
+	
+		e.printStackTrace();
+	}
+
+try{ 
+
+	int count=0;
+	String cat="marker";
+statement=connection.createStatement();
+/*do maintain the category  */
+String sql ="SELECT * FROM products WHERE catagory='"+cat+"'";
+
+
+resultSet = statement.executeQuery(sql);
+while(resultSet.next()){
+count++;
+	System.out.println(resultSet.getString("p_id"));
+
+%> 
+						
+						
+						
+				
 								<div class="col-md-4 product-men mt-5">
 									<div class="men-pro-item simpleCart_shelfItem">
 										<div class="men-thumb-item text-center">
-											<img src="download/mark3.jpg" style="height: 200px;width: 200px;" alt="">
+<!--image the name should be same as id eg.=brush1  -->											
+<img src="images/marker1/<%=resultSet.getString("p_id") %>.jpg" style="height: 200px;width: 200px;" alt="">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="single.jsp?Proid=<%=resultSet.getString("p_id") %>" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
-											<span class="product-new-top">New</span>
-
 										</div>
+										<span class="product-new-top">New</span>
 										<div class="item-info-product text-center border-top mt-4">
 											<h4 class="pt-1">
-												<a href="single.html">Zig Brush Markers</a>
+<!-- name -->												<a href="single.jsp?Proid=<%=resultSet.getString("p_id") %>"><%=resultSet.getString("p_name") %></a>
 											</h4>
 											<div class="info-product-price my-2">
-												<span class="item_price">Rs.800.00</span>
-												<del>Rs.1000.00</del>
+<!-- price same as table -->						<span class="item_price"><%=resultSet.getString("price") %></span>
+											
 											</div>
-											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-												<form action="#" method="post">
+										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+												<form action="CartAdd" method="post">
 													<fieldset>
-														<input type="hidden" name="cmd" value="_cart" />
-														<input type="hidden" name="add" value="1" />
-														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name" value="Zig Brush Marker" />
-														<input type="hidden" name="amount" value="800.00" />
-														<input type="hidden" name="discount_amount" value="1.00" />
-														<input type="hidden" name="currency_code" value="IND" />
-														<input type="hidden" name="return" value=" " />
-														<input type="hidden" name="cancel_return" value=" " />
+														<input type="hidden" name="UserID" value="<%=r_id %>">
+														<input type="hidden" name="ProductID" value="<%=resultSet.getString("p_id") %>">
+														
 														<input type="submit" name="submit" value="Add to cart" class="button btn" />
 													</fieldset>
 												</form>
-											</div>
+												
+											</div> 
+
 										</div>
 									</div>
 								</div>
-							</div>
-						</div>
+							
+								
+						
+<!--just copy  -->						
+						
+						
+						<%
+if(count>2){
+	break;
+}
+}
+
+} catch (Exception e) {
+e.printStackTrace();
+}
+finally {
+    try {
+    	resultSet.close();
+		statement.close();
+	} catch (Exception e) {
+		e.printStackTrace();}
+    try {
+    	if(connection!=null) {
+		connection.close();
+		}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+} 
+
+
+%>
+<!-- copy end -->
+		<!--last two div  -->				
+			</div>
+						</div>				
 						<!-- //first section -->
 						<!-- second section -->
 						<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
 							<h3 class="heading-tittle text-center ">Calculator</h3>
 							<div class="row">
-								<div class="col-md-4 product-men mt-5">
-									<div class="men-pro-item simpleCart_shelfItem">
-										<div class="men-thumb-item text-center">
-											<img src="download/calc1.jpg" style="height: 200px;width: 200px;" alt="">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
-												</div>
-											</div>
-										</div>
-										<div class="item-info-product text-center border-top mt-4">
-											<h4 class="pt-1">
-												<a href="single.html">Casio DR-140R</a>
-											</h4>
-											<div class="info-product-price my-2">
-												<span class="item_price">Rs.5220.00</span>
-												<del>Rs.5495.00</del>
-											</div>
-											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-												<form action="#" method="post">
-													<fieldset>
-														<input type="hidden" name="cmd" value="_cart" />
-														<input type="hidden" name="add" value="1" />
-														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name" value="Casio DR-140R" />
-														<input type="hidden" name="amount" value="5220.00" />
-														<input type="hidden" name="discount_amount" value="1.00" />
-														<input type="hidden" name="currency_code" value="IND" />
-														<input type="hidden" name="return" value=" " />
-														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Add to cart" class="button btn" />
-													</fieldset>
-												</form>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4 product-men mt-5">
-									<div class="men-pro-item simpleCart_shelfItem">
-										<div class="men-thumb-item text-center">
-											<img src="download/calc2.jpg" style="height: 200px;width: 200px;" alt="">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
-												</div>
-											</div>
-											<span class="product-new-top">New</span>
+<% 
 
+/*copy  */
+
+
+	try {
+		if(connection==null|| connection.isClosed()) {
+			/*connection  */
+			Class.forName("com.mysql.jdbc.Driver");  
+			connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommerce","root","as01bp2556");
+			
+		}		}
+	catch (Exception e) {
+	
+		e.printStackTrace();
+	}
+
+try{ 
+
+	int count=0;
+	String cat="calculator";
+statement=connection.createStatement();
+/*do maintain the category  */
+String sql ="SELECT * FROM products WHERE catagory='"+cat+"'";
+
+
+resultSet = statement.executeQuery(sql);
+while(resultSet.next()){
+count++;
+	System.out.println(resultSet.getString("p_id"));
+
+%> 
+						
+						
+						
+				
+								<div class="col-md-4 product-men mt-5">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item text-center">
+<!--image the name should be same as id eg.=brush1  -->											
+<img src="images/products/<%=resultSet.getString("p_id") %>.jpg" style="height: 200px;width: 200px;" alt="">
+											<div class="men-cart-pro">
+												<div class="inner-men-cart-pro">
+													<a href="single.jsp?Proid=<%=resultSet.getString("p_id") %>" class="link-product-add-cart">Quick View</a>
+												</div>
+											</div>
 										</div>
+										<span class="product-new-top">New</span>
 										<div class="item-info-product text-center border-top mt-4">
 											<h4 class="pt-1">
-												<a href="single.html">Casio DJ-120D</a>
+<!-- name -->												<a href="single.jsp?Proid=<%=resultSet.getString("p_id") %>"><%=resultSet.getString("p_name") %></a>
 											</h4>
 											<div class="info-product-price my-2">
-												<span class="item_price">Rs599.00</span>
-												<del>Rs677.00</del>
+<!-- price same as table -->						<span class="item_price"><%=resultSet.getString("price") %></span>
+											
 											</div>
-											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-												<form action="#" method="post">
+										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+												<form action="CartAdd" method="post">
 													<fieldset>
-														<input type="hidden" name="cmd" value="_cart" />
-														<input type="hidden" name="add" value="1" />
-														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name" value="Casio DJ-120D" />
-														<input type="hidden" name="amount" value="599.00" />
-														<input type="hidden" name="discount_amount" value="1.00" />
-														<input type="hidden" name="currency_code" value="IND" />
-														<input type="hidden" name="return" value=" " />
-														<input type="hidden" name="cancel_return" value=" " />
+														<input type="hidden" name="UserID" value="<%=r_id %>">
+														<input type="hidden" name="ProductID" value="<%=resultSet.getString("p_id") %>">
+														
 														<input type="submit" name="submit" value="Add to cart" class="button btn" />
 													</fieldset>
 												</form>
-											</div>
+												
+											</div> 
 
 										</div>
 									</div>
 								</div>
-								<div class="col-md-4 product-men mt-5">
-									<div class="men-pro-item simpleCart_shelfItem">
-										<div class="men-thumb-item text-center">
-											<img src="download/calc3.jpg" style="height: 200px;width: 200px;" alt="">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
-												</div>
-											</div>
-										</div>
-										<div class="item-info-product text-center border-top mt-4">
-											<h4 class="pt-1">
-												<a href="single.html">Casio FX82MS</a>
-											</h4>
-											<div class="info-product-price my-2">
-												<span class="item_price">Rs.419.00</span>
-												<del>Rs.435.00</del>
-											</div>
-											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-												<form action="#" method="post">
-													<fieldset>
-														<input type="hidden" name="cmd" value="_cart" />
-														<input type="hidden" name="add" value="1" />
-														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name" value="Casio FX82MS" />
-														<input type="hidden" name="amount" value="419.00" />
-														<input type="hidden" name="discount_amount" value="1.00" />
-														<input type="hidden" name="currency_code" value="IND" />
-														<input type="hidden" name="return" value=" " />
-														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Add to cart" class="button btn" />
-													</fieldset>
-												</form>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+							
+								
+						
+<!--just copy  -->						
+						
+						
+						<%
+if(count>2){
+	break;
+}
+}
+
+} catch (Exception e) {
+e.printStackTrace();
+}
+finally {
+    try {
+    	resultSet.close();
+		statement.close();
+	} catch (Exception e) {
+		e.printStackTrace();}
+    try {
+    	if(connection!=null) {
+		connection.close();
+		}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+} 
+
+
+%>
+<!-- copy end -->
+		<!--last two div  -->				
+			</div>
+						</div>				
 						<!-- //second section -->
 						<!-- third section -->
 						<div class="product-sec1 product-sec2 px-sm-5 px-3">
@@ -820,9 +803,7 @@ a {
 						<% 
 
 /*copy  */
-Statement statement=null;
-Connection connection=null;
-ResultSet  resultSet=null;
+
 	try {
 		if(connection==null|| connection.isClosed()) {
 			/*connection  */
@@ -847,7 +828,7 @@ String sql ="SELECT * FROM products WHERE catagory='"+cat+"'";
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 count++;
-	
+	System.out.println(resultSet.getString("p_id"));
 
 %> 	
 						
@@ -858,32 +839,33 @@ count++;
 								<div class="col-md-4 product-men mt-5">
 									<div class="men-pro-item simpleCart_shelfItem">
 										<div class="men-thumb-item text-center">
-<!--image the name should be same as id eg.=brush1  -->											<img src="download/brush<%=resultSet.getString("p_id") %>.jpg" style="height: 200px;width: 200px;" alt="">
+<!--image the name should be same as id eg.=brush1  -->											
+<img src="images/products/<%=resultSet.getString("p_id") %>.jpg" style="height: 200px;width: 200px;" alt="">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
-													<a href="single.html" class="link-product-add-cart">Quick View</a>
+													<a href="single.jsp?Proid=<%=resultSet.getString("p_id") %>" class="link-product-add-cart">Quick View</a>
 												</div>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										<div class="item-info-product text-center border-top mt-4">
 											<h4 class="pt-1">
-<!-- name -->												<a href="single.html"><%=resultSet.getString("p_name") %></a>
+<!-- name -->												<a href="single.jsp?Proid=<%=resultSet.getString("p_id") %>"><%=resultSet.getString("p_name") %></a>
 											</h4>
 											<div class="info-product-price my-2">
 <!-- price same as table -->						<span class="item_price"><%=resultSet.getString("price") %></span>
-												<del>Rs.6600.00</del>
+											
 											</div>
 										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 												<form action="CartAdd" method="post">
 													<fieldset>
-														<input type="hidden" name="uid" value="<%=r_id %>">
-														<input type="hidden" name="pid" value="<%=resultSet.getString("p_id") %>">
+														<input type="hidden" name="UserID" value="<%=r_id %>">
+														<input type="hidden" name="ProductID" value="<%=resultSet.getString("p_id") %>">
 														
 														<input type="submit" name="submit" value="Add to cart" class="button btn" />
 													</fieldset>
 												</form>
-												<a type="button" href="single.jsp?Proid=<%=resultSet.getString("p_id") %>">HERE</a>
+												
 											</div> 
 
 										</div>
@@ -1321,10 +1303,10 @@ finally {
 						<h3 class="text-white font-weight-bold mb-3">Quick Links</h3>
 						<ul>
 							<li class="mb-3">
-								<a href="about.html">About Us</a>
+								<a href="about.jsp">About Us</a>
 							</li>
 							<li class="mb-3">
-								<a href="contact.html">Contact Us</a>
+								<a href="contact.jsp">Contact Us</a>
 							</li>
 							<!-- <li class="mb-3">
 								<a href="help.html">Help</a>
@@ -1614,33 +1596,11 @@ finally {
 				<div class="sub-some child-momu mt-4">
 					<h5 class="font-weight-bold mb-3">Payment Method</h5>
 					<ul>
-						<li>
-							<img src="images/pay2.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay5.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay1.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay4.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay6.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay3.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay7.png" alt="">
-						</li>
+						
 						<li>
 							<img src="images/pay8.png" alt="">
 						</li>
-						<li>
-							<img src="images/pay9.png" alt="">
-						</li>
+						
 					</ul>
 				</div>
 				<!-- //payment -->

@@ -3,7 +3,7 @@ package com;
 
 public class ProductEmp {
 	private int p_id;  
-	private String p_name,price,p_image,description,quantity;/* add image*/
+	private String p_name,price,p_cat,description,quantity;/* add image*/
 	public int getP_id() {
 		return p_id;
 	}
@@ -23,11 +23,11 @@ public class ProductEmp {
 		this.price = price;
 	}
 	
-	public String getP_image() {
-		return p_image;
+	public String getP_cat() {
+		return p_cat;
 	}
-	public void setP_image(String p_image) {
-		this.p_image = p_image;
+	public void setP_cat(String p_cat) {
+		this.p_cat = p_cat;
 	}
 	
 	public String getDescription() {

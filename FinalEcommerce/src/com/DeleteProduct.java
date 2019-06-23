@@ -25,7 +25,8 @@ public class DeleteProduct extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("delete page");
-        String sid=request.getParameter("id"); 
+		String id=request.getParameter("Delid");
+		String sid=(String)id;  /*conversion to string  */
         System.out.println("delete===="+sid);
         
         try{  
@@ -40,6 +41,6 @@ public class DeleteProduct extends HttpServlet {
         }catch(Exception e){e.printStackTrace();} 
         
         
-        response.sendRedirect("ViewProduct");  
+        response.sendRedirect("ViewProduct.jsp");  
     }  
 }  

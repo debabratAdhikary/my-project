@@ -36,6 +36,10 @@ body {
     float: none;
   }
 }
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -305,7 +309,9 @@ body {
 </div>
 
 
-
+<div class="container signin" style="align:left;">
+		<a href="AdminHome.jsp">Back</a>
+		</div>
 
 <div class="main">
 <div class="row">
@@ -313,16 +319,17 @@ body {
 <div class="col-lg-6"> <table class="table table-bordered" id="tblCustomers">
        <thead class="thead-dark thead-flex sticky-top">
       <tr>
-      <th style="font-size : 21; width:25%;">product ID</th>    <!--name should be same as the table  -->
-      <th style="font-size : 21;width: 25%;">Product Name</th>
-          <th style="font-size : 21;width: 10%;">catagory</th>
-        <th style="font-size : 21;width: 10%;">price</th>
-         <th style="font-size : 21;width: 25%;">description</th>
-          <th style="font-size : 21;width: 25%;">quantity</th>
-          <th style="font-size : 21;width: 25%;">edit</th>
-                  <th style="font-size : 21;width: 25%;">delete</th>
+      <th style="font-size : 21; width:25%;">Register ID</th>    <!--name should be same as the table  -->
+      <th style="font-size : 21;width: 25%;">User Name</th>
+          <th style="font-size : 21;width: 10%;">Contact</th>
+        <th style="font-size : 21;width: 10%;">Email</th>
+         <th style="font-size : 21;width: 25%;">Password</th>
+          <th style="font-size : 21;width: 25%;">Address</th>
+          <th style="font-size : 21;width: 25%;">Status</th>
+                  
       </tr>	
     </thead>
+    
 <% 
 
 
@@ -344,7 +351,7 @@ try{
 
 statement=connection.createStatement();
 
-String sql ="SELECT * FROM products ORDER BY p_id DESC";
+String sql ="SELECT * FROM register ORDER BY r_id DESC";
 
 
 resultSet = statement.executeQuery(sql);
@@ -357,24 +364,30 @@ while(resultSet.next()){
 	
     <tbody class="tbody" style="height: 200px; text-align:left;  overflow: scroll;">
       <tr>
-        <td style="width:5%;"><%=resultSet.getString("p_id") %></td> 
-        <td style="width:25%;"> <strong style="color:#000033;"><%=resultSet.getString("p_name") %></strong></td>
-        <td style="width:10%;"><%=resultSet.getString("catagory") %></td>
-              <td style="width:20%;"><%=resultSet.getString("price") %></td>
+        <td style="width:5%;"><%=resultSet.getString("r_id") %></td> 
+        <td style="width:25%;"> <strong style="color:#000033;"><%=resultSet.getString("name") %></strong></td>
+        <td style="width:10%;"><%=resultSet.getString("contact") %></td>
+              <td style="width:20%;"><%=resultSet.getString("email") %></td>
 
-        <td style="width:25%;">  <%=resultSet.getString("description") %>  </td>
+        <td style="width:25%;">  <%=resultSet.getString("password") %>  </td>
         
-        <td style="width:15%;">  <%=resultSet.getString("quantity") %>  </td>
-         <td style="width:15%;">  <a href="ProductEdit.jsp?Proid=<%=resultSet.getString("p_id") %>">edit</a>  </td>
-         <td style="width:15%;">  <a href="DeleteProduct?Delid=<%=resultSet.getString("p_id") %>">delete</a>  </td>
+        <td style="width:15%;">  <%=resultSet.getString("address") %>  </td>
+        <td style="width:15%;">  <a href="UserUpdateAdmin.jsp?Proid=<%=resultSet.getString("r_id") %>">edit</a>  </td> 
+       	
       </tr>
-  
-   
+  	
+   	
+   	
     </tbody>
   
 		<% 
 
+		
+		
+		
+	
 }
+
 
 } catch (Exception e) {
 e.printStackTrace();

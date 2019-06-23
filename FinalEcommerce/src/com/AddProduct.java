@@ -56,7 +56,7 @@ public class AddProduct extends HttpServlet {
 			e1.printStackTrace();
 		}
 		String ProId=request.getParameter("p_name");
-	
+		String Cate=request.getParameter("p_cat");
 		 String price=request.getParameter("price");  
 	        /*String p_image=request.getParameter("p_image");*/
 	        
@@ -67,7 +67,7 @@ public class AddProduct extends HttpServlet {
 	
 		
 		
-		  InputStream inputStream1 = null; 
+		 /* InputStream inputStream1 = null; 
 	        Part filePart1 = request.getPart("p_imagess");
 	        if (filePart1 != null) {
 	          
@@ -77,7 +77,7 @@ public class AddProduct extends HttpServlet {
 	             
 	          
 	            inputStream1 = filePart1.getInputStream();
-	        }
+	        }*/
 	        Statement stat=null;
 		Connection conn=null;
 		int  resut=0;
@@ -99,9 +99,9 @@ public class AddProduct extends HttpServlet {
 			try {
 		
 			stat=conn.createStatement();
-		 pstmt = conn.prepareStatement("INSERT INTO products(p_name,p_image,price,description,quantity) VALUES (?,?,?,?,?) ");
+		 pstmt = conn.prepareStatement("INSERT INTO products(p_name,catagory,price,description,quantity) VALUES (?,?,?,?,?) ");
 		 pstmt.setString(1, ProId);
-		 pstmt.setBlob(2,inputStream1);
+		 pstmt.setString(2,Cate);
 		 pstmt.setString(3, price);
 		 pstmt.setString(4, description);
 		 pstmt.setString(5, quantity);

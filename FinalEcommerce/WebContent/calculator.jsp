@@ -1,14 +1,16 @@
-<%@page import="java.sql.DriverManager"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@ page import="java.util.List" %>
-
+    
 <!DOCTYPE html>
 <html lang="zxx">
 
 <head>
-	<!-- <title>Electro Store Ecommerce Category Bootstrap Responsive Web Template | Single Product 1 :: w3layouts</title> -->
+	<!-- <title>Electro Store Ecommerce Category Bootstrap Responsive Web Template | Electronics :: w3layouts</title> -->
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -242,13 +244,14 @@
 						<!-- cart details -->
 						<div class="col-2 top_nav_right text-center mt-sm-0 mt-2">
 							<div class="wthreecartaits wthreecartaits2 cart cart box_1">
-								<form action="#" method="post" class="last">
-									<input type="hidden" name="cmd" value="_cart">
-									<input type="hidden" name="display" value="1">
-									<button class="btn w3view-cart" type="submit" name="submit" value="">
-										<i class="fas fa-cart-arrow-down"></i>
-									</button>
-								</form>
+							
+							
+							
+						
+						
+										<a href="payment.jsp"><i class="fas fa-cart-arrow-down" style="height: 40px;width: 45px;"></i></a>
+								
+							
 							</div>
 						</div>
 						<!-- //cart details -->
@@ -309,32 +312,32 @@
 										<div class="col-sm-6 multi-gd-img">
 											<ul class="multi-column-dropdown">
 												<li>
-													<a href="product.html?"> Pen</a>
+													<a href="pen.jsp?"> Pen</a>
 												</li>
 												<li>
-													<a href="product.html">Marker</a>
+													<a href="marker.jsp">Marker</a>
 												</li>
 												<li>
-													<a href="product.html">Pencil</a>
+													<a href="pencil.jsp">Pencil</a>
 												</li>
 												<li>
-													<a href="product.html">Calculator</a>
+													<a href="calculator.jsp">Calculator</a>
 												</li>
 												<li>
-													<a href="product.html">Diary</a>
+													<a href="product.jsp">Diary</a>
 												</li>
 												<li>
-													<a href="product.html">Notepad</a>
+													<a href="product.jsp">Notepad</a>
 												</li>
 												<li>
-													<a href="product.html">Paper</a>
+													<a href="product.jsp">Paper</a>
 												</li>
 											</ul>
 										</div>
 										<div class="col-sm-6 multi-gd-img">
 											<ul class="multi-column-dropdown">
 												<li>
-													<a href="product.html?procat=<%=Brush%>">Brush</a>
+													<a href="brush.jsp?procat=<%=Brush%>">Brush</a>
 												</li>
 												<li>
 													<a href="product.html">Eraser</a>
@@ -358,7 +361,7 @@
 							
 						</li>
 						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="about.html">About Us</a>
+							<a class="nav-link" href="about.jsp">About Us</a>
 						</li>
 						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
 							<!-- <a class="nav-link" href="product.html">New Arrivals</a> -->
@@ -379,7 +382,7 @@
 							</div> -->
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Contact Us</a>
+							<a class="nav-link" href="contact.jsp">Contact Us</a>
 						</li>
 					</ul>
 				</div>
@@ -399,30 +402,33 @@
 			<div class="container">
 				<ul class="w3_short">
 					<li>
-						<a href="index.html">Home</a>
+						<a href="index.jsp">Home</a>
 						<i>|</i>
 					</li>
-					<li>Product Details</li>
+					<li>Calculator</li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	<!-- //page -->
 
-<div class="banner-bootom-w3-agileits py-5">
+	<!-- top Products -->
+	<div class="ads-grid py-sm-5 py-4">
 		<div class="container py-xl-4 py-lg-2">
 			<!-- tittle heading -->
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-				<span>P</span>roduct
-				<span>D</span>etails</h3>
+				<span>M</span>arkers
+				<span>&</span>
+				<span>B</span>rush pens</h3>
 			<!-- //tittle heading -->
-
-<%
+			<div class="row">
+										<% 
 
 /*copy  */
+	
 Statement statement=null;
 Connection connection=null;
-ResultSet  resultSet=null;
+ResultSet  resultSet=null; 
 	try {
 		if(connection==null|| connection.isClosed()) {
 			/*connection  */
@@ -438,125 +444,65 @@ ResultSet  resultSet=null;
 try{ 
 
 	int count=0;
-
-	/*fetch the id from index page  */
-	Object i=request.getParameter("Proid");
-	String idd=(String)i;  /*conversion to string  */
-	
-	
-	/* String cat="Brush"; */
+	String cat="calculator";
 statement=connection.createStatement();
-
-String sql ="SELECT * FROM products WHERE p_id='"+idd+"'";
+/*do maintain the category  */
+String sql ="SELECT * FROM products WHERE catagory='"+cat+"'";
 
 
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 count++;
-	
+	System.out.println(resultSet.getString("p_id"));
 
-%> 	
+%> 
+						
+						
+						
+				
+								<div class="col-md-4 product-men mt-5">
+									<div class="men-pro-item simpleCart_shelfItem">
+										<div class="men-thumb-item text-center">
+<!--image the name should be same as id eg.=brush1  -->											
+<img src="images/products/<%=resultSet.getString("p_id") %>.jpg" style="height: 200px;width: 200px;" alt="">
+											<div class="men-cart-pro">
+												<div class="inner-men-cart-pro">
+													<a href="single.jsp?Proid=<%=resultSet.getString("p_id") %>" class="link-product-add-cart">Quick View</a>
+												</div>
+											</div>
+										</div>
+										<span class="product-new-top">New</span>
+										<div class="item-info-product text-center border-top mt-4">
+											<h4 class="pt-1">
+<!-- name -->												<a href="single.jsp?Proid=<%=resultSet.getString("p_id") %>"><%=resultSet.getString("p_name") %></a>
+											</h4>
+											<div class="info-product-price my-2">
+<!-- price same as table -->						<span class="item_price"><%=resultSet.getString("price") %></span>
+											
+											</div>
+										<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+												<form action="CartAdd" method="post">
+													<fieldset>
+														<input type="hidden" name="UserID" value="<%=r_id %>">
+														<input type="hidden" name="ProductID" value="<%=resultSet.getString("p_id") %>">
+														
+														<input type="submit" name="submit" value="Add to cart" class="button btn" />
+													</fieldset>
+												</form>
+												
+											</div> 
 
+										</div>
+									</div>
+								</div>
+							
+								
+						
+<!--just copy  -->						
+						
+						
+						<%
 
-
-
-
-	<!-- Single Page -->
-	
-			<div class="row">
-				<div class="col-lg-5 col-md-8 single-right-left ">
-					<div class="grid images_3_of_2">
-						<div class="flexslider">
-							<ul class="slides">
-		<!-- 						<li data-thumb="images/si1.jpg">
-									<div class="thumb-image">
-										<img src="images/si1.jpg" data-imagezoom="true" class="img-fluid" alt=""> </div>
-								</li>   -->
-								<li data-thumb="images/si2.jpg">
-									<div class="thumb-image">
-										<img src="images/products/<%=resultSet.getString("p_id") %>.jpg" data-imagezoom="true" class="img-fluid" alt=""> </div>
-								</li>
-								<!--  
-																<li data-thumb="images/si3.jpg">
-									<div class="thumb-image">
-										<img src="images/si3.jpg" data-imagezoom="true" class="img-fluid" alt=""> </div>
-								</li>-->
-							</ul>
-							<div class="clearfix"></div>
-						</div>
-					</div> 
-				</div>
-
-				<div class="col-lg-7 single-right-left simpleCart_shelfItem">
-					<h3 class="mb-3"><%=resultSet.getString("p_name") %> </h3>
-					<p class="mb-3">
-						<span class="item_price"><%=resultSet.getString("price") %></span>
-						<del class="mx-2 font-weight-light">$280.00</del>
-						<label>Free delivery</label>
-					</p>
-					<div class="single-infoagile">
-						<ul>
-							<li class="mb-3">
-								Cash on Delivery Eligible.
-							</li>
-							<!-- <li class="mb-3">
-								Shipping Speed to Delivery.
-							</li>
-							<li class="mb-3">
-								EMIs from $655/month.
-							</li>
-							<li class="mb-3">
-								Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C
-							</li> -->
-						</ul>
-					</div>
-					<div class="product-single-w3l">
-						<p class="my-3">
-							<i class="far fa-hand-point-right mr-2"></i>
-							<label>1 Year</label>Manufacturer Warranty</p>
-						<ul>
-							<li class="mb-1">
-								<%=resultSet.getString("catagory") %>
-							</li>
-							<li class="mb-1">
-								<%=resultSet.getString("description") %>
-							</li>
-							<li class="mb-1">
-								<%=resultSet.getString("quantity") %>
-							</li>
-							<!-- <li class="mb-1">
-								3300 mAh Battery
-							</li>
-							<li class="mb-1">
-								Exynos 7870 Octa Core 1.6GHz Processor
-							</li> -->
-						</ul>
-						<!-- <p class="my-sm-4 my-3">
-							<i class="fas fa-retweet mr-3"></i>Net banking & Credit/ Debit/ ATM card
-						</p> -->
-					</div>
-					<div class="occasion-cart">
-						<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-							<form action="CartAdd" method="post">
-								<fieldset>
-									<input type="hidden" name="cmd" value="_cart" />
-											<input type="hidden" name="ProductID" value="<%="p_id" %>" class="button" />
-									
-												<input type="hidden" name="UserID" value="<%="r_id" %>" class="button" />
-									
-											<input type="submit" name="submit" value="Add to cart" class="button" />
-								</fieldset>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-	
-						<% 
-if(count>2){
-	break;
-}
 }
 
 } catch (Exception e) {
@@ -584,17 +530,11 @@ finally {
 			</div>
 						</div>				
 						
-	
-	
-	
-	
-	
-	
-	<!-- //Single Page -->
+						<!-- //first section -->
+	<!-- //top products -->
 
 	<!-- middle section -->
-	
-	<!-- <div class="join-w3l1 py-sm-5 py-4">
+	<div class="join-w3l1 py-sm-5 py-4">
 		<div class="container py-xl-4 py-lg-2">
 			<div class="row">
 				<div class="col-lg-6">
@@ -628,18 +568,19 @@ finally {
 			</div>
 		</div>
 	</div>
- -->	<!-- middle section -->
+	<!-- middle section -->
 
+	<!-- footer -->
 	<!-- footer -->
 	<footer>
 		<div class="footer-top-first">
 			<div class="container py-md-5 py-sm-4 py-3">
 				<!-- footer first section -->
-				<h2 class="footer-top-head-w3l font-weight-bold mb-2">Electronics :</h2>
+				<h2 class="footer-top-head-w3l font-weight-bold mb-2">Panchratna Stationery Shop :</h2>
 				<p class="footer-main mb-4">
-					If you're considering a new laptop, looking for a powerful new car stereo or shopping for a new HDTV, we make it easy to
-					find exactly what you need at a price you can afford. We offer Every Day Low Prices on TVs, laptops, cell phones, tablets
-					and iPads, video games, desktop computers, cameras and camcorders, audio, video and more.</p>
+					If you're considering a set of new paint brush, looking for a set of new pencil which can do amazing work or shopping for a new calculator, we make it easy to
+					find exactly what you need at a price you can afford. We offer Every Day Low Prices on pens, a wide range of markers, notepads, calculators
+					and paint brushes, diaries, erasers and more.</p>
 				<!-- //footer first section -->
 				<!-- footer second section -->
 				<div class="row w3l-grids-footer border-top border-bottom py-sm-4 py-3">
@@ -650,7 +591,7 @@ finally {
 							</div>
 							<div class="col-8 text-form-footer">
 								<h3>Free Shipping</h3>
-								<p>on orders over $100</p>
+								<p>on orders above Rs.700</p>
 							</div>
 						</div>
 					</div>
@@ -661,7 +602,7 @@ finally {
 							</div>
 							<div class="col-8 text-form-footer">
 								<h3>Fast Delivery</h3>
-								<p>World Wide</p>
+								<p>Within Pune</p>
 							</div>
 						</div>
 					</div>
@@ -685,7 +626,7 @@ finally {
 			<div class="container py-md-5 py-sm-4 py-3">
 				<div class="row footer-info w3-agileits-info">
 					<!-- footer categories -->
-					<div class="col-md-3 col-sm-6 footer-grids">
+					<!-- <div class="col-md-3 col-sm-6 footer-grids">
 						<h3 class="text-white font-weight-bold mb-3">Categories</h3>
 						<ul>
 							<li class="mb-3">
@@ -707,24 +648,24 @@ finally {
 								<a href="product2.html">Refrigerators</a>
 							</li>
 						</ul>
-					</div>
+					</div> -->
 					<!-- //footer categories -->
 					<!-- quick links -->
-					<div class="col-md-3 col-sm-6 footer-grids mt-sm-0 mt-4">
+					<div class="col-md-4 col-sm-6 footer-grids mt-sm-0 mt-4">
 						<h3 class="text-white font-weight-bold mb-3">Quick Links</h3>
 						<ul>
 							<li class="mb-3">
-								<a href="about.html">About Us</a>
+								<a href="about.jsp">About Us</a>
 							</li>
 							<li class="mb-3">
-								<a href="contact.html">Contact Us</a>
+								<a href="contact.jsp">Contact Us</a>
 							</li>
-							<li class="mb-3">
+							<!-- <li class="mb-3">
 								<a href="help.html">Help</a>
 							</li>
 							<li class="mb-3">
 								<a href="faqs.html">Faqs</a>
-							</li>
+							</li> -->
 							<li class="mb-3">
 								<a href="terms.html">Terms of use</a>
 							</li>
@@ -733,7 +674,7 @@ finally {
 							</li>
 						</ul>
 					</div>
-					<div class="col-md-3 col-sm-6 footer-grids mt-md-0 mt-4">
+					<div class="col-md-4 col-sm-6 footer-grids mt-md-0 mt-4">
 						<h3 class="text-white font-weight-bold mb-3">Get in Touch</h3>
 						<ul>
 							<li class="mb-3">
@@ -746,14 +687,14 @@ finally {
 								<i class="fas fa-envelope-open"></i>
 								<a href="mailto:example@mail.com"> mail 1@example.com</a>
 							</li>
-							<li>
+						<!-- 	<li>
 								<i class="fas fa-envelope-open"></i>
 								<a href="mailto:example@mail.com"> mail 2@example.com</a>
-							</li>
+							</li> -->
 						</ul>
 					</div>
-					<div class="col-md-3 col-sm-6 footer-grids w3l-agileits mt-md-0 mt-4">
-						<!-- newsletter -->
+					<div class="col-md-4 col-sm-6 footer-grids w3l-agileits mt-md-0 mt-4">
+						<!-- newsletter --><!-- 
 						<h3 class="text-white font-weight-bold mb-3">Newsletter</h3>
 						<p class="mb-3">Free Delivery on your first order!</p>
 						<form action="#" method="post">
@@ -761,7 +702,7 @@ finally {
 								<input type="email" class="form-control" placeholder="Email" name="email" required="">
 								<input type="submit" value="Go">
 							</div>
-						</form>
+						</form> -->
 						<!-- //newsletter -->
 						<!-- social icons -->
 						<div class="footer-grids  w3l-socialmk mt-3">
@@ -798,7 +739,7 @@ finally {
 		<div class="agile-sometext py-md-5 py-sm-4 py-3">
 			<div class="container">
 				<!-- brands -->
-				<div class="sub-some">
+				<!-- <div class="sub-some">
 					<h5 class="font-weight-bold mb-2">Mobile & Tablets :</h5>
 					<ul>
 						<li class="m-sm-1">
@@ -1001,39 +942,17 @@ finally {
 							<a href="product2.html" class="border-right pr-2">Sandwich Makers</a>
 						</li>
 					</ul>
-				</div>
-				<!-- //brands -->
+				</div>-->
+				<!-- //brands --> 
 				<!-- payment -->
 				<div class="sub-some child-momu mt-4">
 					<h5 class="font-weight-bold mb-3">Payment Method</h5>
 					<ul>
-						<li>
-							<img src="images/pay2.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay5.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay1.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay4.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay6.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay3.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay7.png" alt="">
-						</li>
+						
 						<li>
 							<img src="images/pay8.png" alt="">
 						</li>
-						<li>
-							<img src="images/pay9.png" alt="">
-						</li>
+						
 					</ul>
 				</div>
 				<!-- //payment -->
@@ -1045,8 +964,8 @@ finally {
 	<!-- copyright -->
 	<div class="copy-right py-3">
 		<div class="container">
-			<p class="text-center text-white">© 2018 Electro Store. All rights reserved | Design by
-				<a href="http://w3layouts.com"> W3layouts.</a>
+			<p class="text-center text-white">© 2018 PANCHRATNA STATIONERY SHOP. All rights reserved | Design by
+				<a href="http://w3layouts.com"> RadiantOneSolution.</a>
 			</p>
 		</div>
 	</div>
@@ -1136,25 +1055,10 @@ finally {
 		}
 	</script>
 	<!-- //password-script -->
-
-	<!-- imagezoom -->
-	<script src="js/imagezoom.js"></script>
-	<!-- //imagezoom -->
-
-	<!-- flexslider -->
-	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
-
-	<script src="js/jquery.flexslider.js"></script>
-	<script>
-		// Can also be used with $(document).ready()
-		$(window).load(function () {
-			$('.flexslider').flexslider({
-				animation: "slide",
-				controlNav: "thumbnails"
-			});
-		});
-	</script>
-	<!-- //FlexSlider-->
+	
+	<!-- scroll seller -->
+	<script src="js/scroll.js"></script>
+	<!-- //scroll seller -->
 
 	<!-- smoothscroll -->
 	<script src="js/SmoothScroll.min.js"></script>
@@ -1199,7 +1103,6 @@ finally {
 	<script src="js/bootstrap.js"></script>
 	<!-- //for bootstrap working -->
 	<!-- //js-files -->
-
 </body>
 
 </html>
